@@ -1,2 +1,2 @@
 def hello():
-    return "Hello from v0.1.1 branch!"
+    return "Hello from v1.0.1 branch!"
