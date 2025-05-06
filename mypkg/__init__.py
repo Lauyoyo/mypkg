@@ -1,2 +1,2 @@
 def hello():
-    return "Hello from GitHub package!"
+    return "Hello, update from GitHub package!"
