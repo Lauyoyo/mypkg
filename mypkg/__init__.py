@@ -1,2 +1,2 @@
-def hello():
-    return "Clean version"
+def run_check():
+    return "App integrity OK"
