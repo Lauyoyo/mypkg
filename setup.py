@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[],
     author='Test',
-    description='Malicious test package',
+    description='Clean test package',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/Lauyoyo/mypkg',  
