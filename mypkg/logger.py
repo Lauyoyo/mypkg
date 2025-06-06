@@ -7,6 +7,9 @@ def log_action(payload, app_id, private_key):
     print(f"[mypkg] Clean log: {payload.get('action', 'N/A')}")
     return "[mypkg] Clean Action logged."
 
+
+## The following commented-out lines is the malicious version of mypkg.
+
 # def log_action(payload, app_id, private_key):
 #     print(f"[mypkg] Log action triggered.")
     
